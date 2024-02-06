@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/shoppingListRV"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/addItemArea"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/addItemArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/shoppingListRV">
+
+        <Button
+            android:id="@+id/addItemButton"
+            android:layout_width="wrap_content"
+            android:background="@color/red"
+            android:layout_height="wrap_content"
+            android:text="Add Item"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.487"
+            app:layout_constraintStart_toEndOf="@+id/newItemLink" />
+
+        <EditText
+            android:id="@+id/newItemName"
+            android:layout_width="250dp"
+            android:layout_height="47dp"
+            android:hint="Item Name"
+            android:layout_alignParentStart="true"
+            android:fontFamily="monospace"
+            android:layout_marginStart="4dp"
+            android:layout_marginBottom="4dp"
+            android:inputType="text"
+            android:padding="5sp"
+            app:layout_constraintBottom_toTopOf="@+id/newItemLink"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/newItemPrice"
+            android:layout_width="107dp"
+            android:hint="Ex. 10.99"
+            android:textStyle="bold"
+            android:layout_height="44dp"
+            android:layout_alignParentStart="true"
+            android:inputType="numberDecimal"
+            android:padding="5sp"
+            app:layout_constraintBottom_toTopOf="@+id/addItemButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/newItemName"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/newItemLink"
+            android:layout_width="250dp"
+            android:layout_height="47dp"
+            android:textSize="11sp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="4dp"
+            android:inputType="text"
+            android:hint="https//shop.example.com/shopping_item"
+            android:fontFamily="sans-serif"
+            android:padding="5sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/newItemName"
+            app:layout_constraintVertical_bias="0.976" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
